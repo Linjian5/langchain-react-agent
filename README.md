@@ -79,13 +79,4 @@ langchain-react-agent/
 └── README.md
 ```
 
-## 面试讲解要点
-
-- **LangChain 1.x 重构**：`AgentExecutor + create_react_agent` 已下线，统一到 `create_agent`（底层 LangGraph）。这是 2025 年的最新生态变化
-- **Function Calling vs ReAct 文本**：1.x 走 Function Calling 协议（结构化 JSON），不再要求 LLM 输出 `Action: xxx / Action Input: xxx` 文本格式——更稳定、可并行
-- **`@tool` 装饰器**：从函数签名 + docstring 自动生成 JSON Schema，省掉手写
-- **为什么还要会手写**：框架出问题（解析失败、死循环、token 爆）必须懂底层原理才能 debug——见配套手写版仓库
-
-## 许可
-
 MIT
